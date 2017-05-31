@@ -5,6 +5,11 @@ package iitkgp;
  * @location Indian Institute of Technology, Kharagpur
  * <h3>Description</h3>
  * This abstratc class validates all the data from user.
+ * List of functions:
+ * @see Validate#validatePorts(int)
+ * @see Validate#validateUsers(int)
+ * @see Validate#validateSwitches(int)
+ * @see Validate#validateCores(int)
  */
 public abstract class Validate {
 	/**
@@ -13,7 +18,7 @@ public abstract class Validate {
 	 * @param ports user input indicating how many ports a switch can possess
 	 * @return boolean value
 	 */
-	public boolean validatePorts(int ports){
+	public static boolean validatePorts(int ports){
 		if(ports<4)
 			return false;
 		return true;
@@ -26,7 +31,7 @@ public abstract class Validate {
 	 *  <p>We can extend it by increasing the GRID size in Database class
 	 *  @see Database#setPORTS(int)
 	 */
-	public boolean validateUsers(int users){
+	public static boolean validateUsers(int users){
 		/* we are taking maximum users slightly lesser than maximum allowable.
 		 * so as to allow switches and core switches to be accomodated without overlapping.
 		 * This is just to reduce comlexity.
@@ -45,7 +50,7 @@ public abstract class Validate {
 	 * @param switches : number of switches
 	 * @return Boolean
 	 */
-	public boolean validateSwitches(int switches){
+	public static boolean validateSwitches(int switches){
 		/*
 		 * optimum number of switches=#users/(Number of ports in a switch)/2.
 		 * Divided by 2 because half or ports of a switch will be connected to cores.
@@ -62,7 +67,7 @@ public abstract class Validate {
 	 * @param cores Integer denoting  number of cores
 	 * @return boolean value
 	 */
-	public boolean validateCores(int cores){
+	public static boolean validateCores(int cores){
 		/*
 		 * Assuming Maximum cores allowed is as much as the number of switches
 		 * and minimum number of cores = n/m i.e all ports of cores serves all different switches
