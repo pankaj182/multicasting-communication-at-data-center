@@ -1,6 +1,6 @@
 package iitkgp;
 /**
- * this abstract class is a factory class used to return instances of a class.
+ * This abstract class is a factory class used to return instance of a class.
  * Since it an abstract class, Hence it can't be instantiated.
  * @since 02/06/2017
  * @author pankaj
@@ -34,7 +34,7 @@ public abstract class NodeFactory {
 	/**
 	 * This method is used to return instance of Switch class
 	 * @param id The identity given to a switch.The location is its ID= 100*x+y
-	 * @return instance of Switch class.
+	 * @return instance of Switch class
 	 * @see Switch
 	 * @see Utilities#rand(int, int, int, boolean)
 	 */
